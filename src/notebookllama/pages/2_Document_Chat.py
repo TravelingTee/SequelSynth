@@ -5,6 +5,7 @@ import os
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
+from .. import branding
 from verifying import verify_claim as sync_verify_claim
 from llama_index.tools.mcp import BasicMCPClient
 
@@ -23,12 +24,12 @@ def sync_chat(inpt: str):
 
 
 # Chat Interface
-st.set_page_config(page_title="NotebookLlaMa - Document Chat", page_icon="🗣")
+st.set_page_config(page_title=f"{branding.PRODUCT_NAME} - Document Chat", page_icon="🗣")
 
 st.sidebar.header("Document Chat🗣")
 st.sidebar.info("To switch to the Home page, select it from above!🔺")
 st.markdown("---")
-st.markdown("## NotebookLlaMa - Document Chat🗣")
+st.markdown(f"## {branding.PRODUCT_NAME} - Document Chat🗣")
 
 # Initialize chat history
 if "messages" not in st.session_state:

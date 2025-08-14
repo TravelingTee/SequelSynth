@@ -1,19 +1,13 @@
-# NotebookLlaMa🦙
+# Sequel
 
-## A fluffy and open-source alternative to NotebookLM!
-
-https://github.com/user-attachments/assets/7e9cca45-8a4c-4dfa-98d2-2cef147422f2
+## An open-source, LlamaCloud-backed alternative to NotebookLM
 
 <p align="center">
-  A fully open-source alternative to NotebookLM, backed by <a href="https://cloud.llamaindex.ai?utm_source=demo&utm_medium=notebookLM"><strong>LlamaCloud</strong></a>.
+  Sequel is a rebranded distribution of the NotebookLlama project, backed by <a href="https://cloud.llamaindex.ai?utm_source=demo&utm_medium=notebookLM"><strong>LlamaCloud</strong></a>.
 </p>
 
 <p align="center">
-    <a href="https://github.com/run-llama/notebookllama/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/run-llama/notebookllama?color=blue"></a>
-    <a href="https://github.com/run-llama/notebookllama/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/run-llama/notebookllama?color=yellow"></a>
-    <a href="https://github.com/run-llama/notebookllama/issues"><img alt="Issues" src="https://img.shields.io/github/issues/run-llama/notebookllama?color=orange"></a>
-    <br>
-    <a href="https://mseep.ai/app/run-llama-notebookllama"><img alt="MseeP.ai Security Assessment Badge" src="https://mseep.net/pr/run-llama-notebookllama-badge.png"></a>
+    <a href="./LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue"></a>
 </p>
 
 ### Prerequisites
@@ -41,8 +35,9 @@ For more install options, see `uv`'s [official documentation](https://docs.astra
 **1. Clone the Repository**
 
 ```bash
-git clone https://github.com/run-llama/notebookllama
-cd notebookllama/
+# Clone this repository and enter its directory
+git clone <this-repo-url>
+cd <this-repo-directory>
 ```
 
 **2. Install Dependencies**
@@ -132,6 +127,10 @@ streamlit run src/notebookllama/Home.py
 And start exploring the app at `http://localhost:8501/`.
 
 ---
+
+### Attribution
+
+Sequel is derived from the MIT-licensed project [NotebookLlama](https://github.com/run-llama/notebookllama). See [LICENSE](./LICENSE) for details.
 
 ### Contributing
 

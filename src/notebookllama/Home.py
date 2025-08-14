@@ -20,6 +20,7 @@ from opentelemetry.exporter.otlp.proto.http.trace_exporter import (
     OTLPSpanExporter,
 )
 
+from . import branding
 load_dotenv()
 
 # define a custom span exporter
@@ -138,7 +139,7 @@ def sync_create_podcast(file_content: str, config: PodcastConfig = None):
 
 # Display the network
 st.set_page_config(
-    page_title="NotebookLlaMa - Home",
+    page_title=f"{branding.PRODUCT_NAME} - Home",
     page_icon="🏠",
     layout="wide",
     menu_items={
@@ -150,7 +151,7 @@ st.set_page_config(
 st.sidebar.header("Home🏠")
 st.sidebar.info("To switch to the Document Chat, select it from above!🔺")
 st.markdown("---")
-st.markdown("## NotebookLlaMa - Home🦙")
+st.markdown(f"## {branding.PRODUCT_NAME} - Home🦙")
 
 # Initialize session state BEFORE creating the text input
 if "workflow_results" not in st.session_state:

@@ -3,6 +3,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 from dotenv import load_dotenv
 from typing import List, Optional
+from .. import branding
 
 from documents import DocumentManager, ManagedDocument
 
@@ -46,7 +47,7 @@ def display_document(document: ManagedDocument) -> None:
 def main():
     # Display the network
     st.set_page_config(
-        page_title="NotebookLlaMa - Document Management",
+        page_title=f"{branding.PRODUCT_NAME} - Document Management",
         page_icon="📚",
         layout="wide",
         menu_items={
@@ -58,7 +59,7 @@ def main():
     st.sidebar.header("Document Management📚")
     st.sidebar.info("To switch to the other pages, select it from above!🔺")
     st.markdown("---")
-    st.markdown("## NotebookLlaMa - Document Management📚")
+    st.markdown(f"## {branding.PRODUCT_NAME} - Document Management📚")
 
     # Slider for number of documents
     names = st.multiselect(
