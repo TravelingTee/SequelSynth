@@ -9,6 +9,7 @@ import asyncio
 from processing import get_plots_and_tables
 import streamlit as st
 from PIL import Image
+
 try:
     from . import branding  # type: ignore
 except Exception:
@@ -51,7 +52,9 @@ def get_plots_and_tables_sync(file: io.BytesIO):
 
 # Direct Streamlit execution
 # Chat Interface
-st.set_page_config(page_title=f"{branding.PRODUCT_NAME} - Images and Tables", page_icon="📊")
+st.set_page_config(
+    page_title=f"{branding.PRODUCT_NAME} - Images and Tables", page_icon="📊"
+)
 
 st.sidebar.header("Images and Tables📊")
 st.sidebar.info("To switch to the Home page, select it from above!🔺")
