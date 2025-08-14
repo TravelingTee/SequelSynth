@@ -9,7 +9,13 @@ import asyncio
 from processing import get_plots_and_tables
 import streamlit as st
 from PIL import Image
-from .. import branding
+try:
+    from . import branding  # type: ignore
+except Exception:
+    try:
+        import notebookllama.branding as branding  # type: ignore
+    except Exception:
+        import branding  # type: ignore
 
 
 def get_plots_and_tables_sync(file: io.BytesIO):

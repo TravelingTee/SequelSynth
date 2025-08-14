@@ -20,7 +20,13 @@ from opentelemetry.exporter.otlp.proto.http.trace_exporter import (
     OTLPSpanExporter,
 )
 
-from . import branding
+try:
+    from . import branding  # type: ignore
+except Exception:
+    try:
+        import notebookllama.branding as branding  # type: ignore
+    except Exception:
+        import branding  # type: ignore
 load_dotenv()
 
 # define a custom span exporter

@@ -5,7 +5,13 @@ import os
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from .. import branding
+try:
+    from .. import branding  # type: ignore
+except Exception:
+    try:
+        import notebookllama.branding as branding  # type: ignore
+    except Exception:
+        import branding  # type: ignore
 from verifying import verify_claim as sync_verify_claim
 from llama_index.tools.mcp import BasicMCPClient
 

@@ -3,7 +3,13 @@ import streamlit as st
 import streamlit.components.v1 as components
 from dotenv import load_dotenv
 from typing import List, Optional
-from .. import branding
+try:
+    from . import branding  # type: ignore
+except Exception:
+    try:
+        import notebookllama.branding as branding  # type: ignore
+    except Exception:
+        import branding  # type: ignore
 
 from documents import DocumentManager, ManagedDocument
 
