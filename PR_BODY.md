@@ -1,10 +1,12 @@
 Sequel branding: rebrand NotebookLlama to Sequel
 
 Summary
+
 - Rebranded the UI and docs to “Sequel,” using centralized branding constants.
 - Preserved package name and functionality; only user-facing strings and docs changed.
 
 What’s included
+
 - Centralized branding in src/notebookllama/branding.py
   - PRODUCT_NAME = "Sequel"
   - TAGLINE, PRIMARY_COLOR, ACCENT_COLOR
@@ -27,12 +29,14 @@ Document Management (branding visible; expected DB connection error until Postgr
 ![Document Management](/home/ubuntu/screenshots/localhost_8501_050907.png)
 
 Notes
+
 - Some features require environment keys and/or Docker (Postgres, Jaeger) per upstream:
   - OpenAI, ElevenLabs, and LlamaCloud
   - docker compose up for analytics/observability
 - Package/module name remains notebookllama to avoid breaking imports; only UI/docs branding changed.
 
 License and Attribution
+
 - Derived from run-llama/notebookllama (MIT)
 - LICENSE remains MIT; attribution added in README
 
@@ -40,5 +44,6 @@ Link to Devin run
 https://app.devin.ai/sessions/7b1a2c4ae9b3454bbb6c96727e880b58
 
 Requested by
+
 - User: TravelingTee
 - GitHub: @TravelingTee

@@ -3,6 +3,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 from dotenv import load_dotenv
 from typing import List, Optional
+
 try:
     from . import branding  # type: ignore
 except Exception:
