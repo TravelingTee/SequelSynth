@@ -10,6 +10,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")
 from dotenv import load_dotenv
 from instrumentation import OtelTracesSqlEngine
 from sqlalchemy import text
+
 try:
     from . import branding  # type: ignore
 except Exception:
@@ -120,7 +121,9 @@ def create_status_pie_chart(df: pd.DataFrame):
 
 
 # Streamlit UI
-st.set_page_config(page_title=f"{branding.PRODUCT_NAME} - Observability Dashboard", page_icon="🔍")
+st.set_page_config(
+    page_title=f"{branding.PRODUCT_NAME} - Observability Dashboard", page_icon="🔍"
+)
 
 st.sidebar.header("Observability Dashboard🔍")
 st.sidebar.info("To switch to the other pages, select them from above!🔺")
